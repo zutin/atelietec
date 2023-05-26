@@ -2,30 +2,36 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\{
+    DashboardController,
+    FacilityController,
+    TicketController,
+    CarrierController,
+};
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+    return view('index');
+})->name('index');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    Route::prefix('/noc')->group(function () {
+        Route::get('/', [DashboardController::class, 'index'])->name('noc.index');
+
+        Route::prefix('/facilities')->group(function () {
+            Route::get('/', [FacilityController::class, 'index'])->name('noc.facilities.index');
+            Route::get('/create', [FacilityController::class, 'create'])->name('noc.facilities.create');
+            Route::delete('/destroy/{facility}', [FacilityController::class, 'destroy'])->name('noc.facilities.destroy');
+            Route::post('/store', [FacilityController::class, 'store'])->name('noc.facilities.store');
+        });
+
+        Route::prefix('/tickets')->group(function () {
+            Route::get('/', [TicketController::class, 'index'])->name('noc.tickets.index');
+        });
+
+        Route::prefix('/carriers')->group(function () {
+            Route::get('/', [CarrierController::class, 'index'])->name('noc.carriers.index');
+        });
+    });
 });
 
 require __DIR__.'/auth.php';
