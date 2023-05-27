@@ -30,6 +30,9 @@ Route::middleware('auth')->group(function () {
 
         Route::prefix('/carriers')->group(function () {
             Route::get('/', [CarrierController::class, 'index'])->name('noc.carriers.index');
+            Route::get('/create', [CarrierController::class, 'create'])->name('noc.carriers.create');
+            Route::delete('/destroy/{carrier}', [CarrierController::class, 'destroy'])->name('noc.carriers.destroy');
+            Route::post('/store', [CarrierController::class, 'store'])->name('noc.carriers.store');
         });
     });
 });

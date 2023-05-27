@@ -30,9 +30,11 @@ class FacilityController extends Controller
 
     public function index()
     {
-        $carrier = Carrier::findOrFail(1);
         $user = User::findOrFail(Auth::user()->id);
-        $facilities = Facility::where('deleted_at', null)->get();
+        $facilities = Facility::where('deleted_at', null)
+            ->whereHas('carrier', function ($query) {
+                $query->where('deleted_at', null);
+            })->get();
 
         return view('noc.facilities.index', compact('user', 'facilities'));
     }
