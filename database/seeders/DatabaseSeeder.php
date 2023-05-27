@@ -12,6 +12,7 @@ class DatabaseSeeder extends Seeder
         \App\Models\Carrier::factory(2)->create();
         \App\Models\Facility::factory(10)->create();
         \App\Models\Ticket::factory(3)->create();
+        \App\Models\TicketFacility::factory(10)->create();
 
         \App\Models\User::factory()->create([
             'name' => 'Lucca',
