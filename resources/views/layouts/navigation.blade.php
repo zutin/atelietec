@@ -5,6 +5,11 @@
 
         {{-- Top Bar --}}
         <div class="flex flex-1 md:w-1/3 justify-center md:justify-start text-white px-2">
+            <div class="items-center">
+                <a href="{{ route('noc.index') }}">
+                    <div class="w-[150px] h-[80px] bg-[url('/storage/app/public/image/white_logo.png')] bg-cover bg-center"></div>
+                </a>
+            </div>
         </div>
         {{-- End Top Bar --}}
 

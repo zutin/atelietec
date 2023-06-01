@@ -1,6 +1,6 @@
 <x-app-layout>
 
-    <div class="max-w-screen-2xl flex mt-10 md:mt-0 md:mx-auto">
+    <div class="max-w-screen-xl flex mt-10 md:mt-0 md:mx-auto">
         <div class="table-container overflow-x-auto">
 
             <div class="flex justify-between items-center mb-4">
@@ -47,7 +47,7 @@
                         Horário de Resolução
                     </th>
                     <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                        Status
+                        Status*
                     </th>
                 </tr>
                 </thead>

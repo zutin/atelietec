@@ -16,7 +16,7 @@
                         <div class="overflow-hidden shadow sm:rounded-md">
 
                             <div class="px-4 py-5 bg-white sm:p-6">
-                                <label for="name" class="block text-sm font-medium text-gray-700">Nome da operadora</label>
+                                <label for="name" class="block text-sm font-medium text-gray-700">Nome da operadora *</label>
                                 <input type="text" name="name" id="name" class="block w-full mt-1 rounded-md shadow-sm form-input"
                                        value="{{ old('name', '') }}" />
                                 @error('name')

@@ -2,25 +2,25 @@
 
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
     {{-- Primary Navigation Menu --}}
-    <div class="max-w-7xl mx-auto p-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto p-6 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
                 {{-- Logo --}}
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('index') }}">
-                        <div class="w-[150px] h-[150px] bg-[url('/storage/app/public/image/logo.png')] bg-cover bg-center"></div>
+                        <div class="w-[200px] h-[200px] bg-[url('/storage/app/public/image/logo.png')] bg-cover bg-center"></div>
                     </a>
                 </div>
 
                 {{-- Navigation Links --}}
-                <div class="hidden space-x-8 sm:-my-px sm:ml-20 sm:flex">
+                <div class="hidden space-x-12 uppercase ml-20 md:ml-40 sm:-my-px sm:flex">
                     <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
                         {{ __('Home') }}
                     </x-nav-link>
                     <x-nav-link :href="route('index')" :active="request()->routeIs('noc')">
                         {{ __('Quem somos') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('index')" :active="request()->routeIs('noc')">
+                    <x-nav-link :href="route('telefonia')" :active="request()->routeIs('telefonia')">
                         {{ __('Serviços') }}
                     </x-nav-link>
                     <x-nav-link :href="route('index')" :active="request()->routeIs('noc')">

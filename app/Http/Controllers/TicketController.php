@@ -51,8 +51,8 @@ class TicketController extends Controller
     {
         $searchTerm = $request->input('search');
 
-        if ($searchTerm === null || $searchTerm === '' || strlen($searchTerm) < 5) {
-            $this->alertService->alert('success', 'Campo de pesquisa precisa ter no mínimo 5 caracteres!');
+        if ($searchTerm === null || $searchTerm === '' || strlen($searchTerm) < 3) {
+            $this->alertService->alert('success', 'Campo de pesquisa precisa ter no mínimo 3 caracteres!');
             return redirect()->route('noc.tickets.index');
         }
 

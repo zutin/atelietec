@@ -13,6 +13,10 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+Route::get('/telefonia', function () {
+    return view('telefonia');
+})->name('telefonia');
+
 Route::middleware('auth')->group(function () {
     Route::prefix('/noc')->group(function () {
         Route::get('/', [DashboardController::class, 'index'])->name('noc.index');
