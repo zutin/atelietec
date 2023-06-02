@@ -1,7 +1,7 @@
 <x-guest-layout>
 
     <section class="relative">
-        <div class="bg-[url('/storage/app/public/image/aqui.jpg')] bg-cover">
+        <div class="bg-[url('/storage/app/public/image/index.jpg')] bg-cover">
 
             <div class="bg-black bg-opacity-30 absolute top-0 left-0 min-h-full min-w-full"></div>
                 <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center relative">
@@ -23,7 +23,7 @@
                             <a class="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto" href="/get-started">
                                 Quero começar
                             </a>
-                            <a class="block w-full rounded bg-gray-50 px-12 py-3 text-sm font-medium text-blue-600 shadow hover:text-blue-700 focus:outline-none focus:ring active:text-blue-500 sm:w-auto" href="/about">
+                            <a class="block w-full rounded bg-gray-50 px-12 py-3 text-sm font-medium text-blue-600 shadow hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring active:text-blue-500 sm:w-auto" href="/about">
                                 Saiba mais
                             </a>
                         </div>
@@ -55,20 +55,16 @@
                 <x-dashboard.service-info color="blue" icon="deskphone" title="Telefonia" desc="Telefonia fixa e telefonia móvel, podem ser grandes aliados em nossas necessidades diárias."></x-dashboard.service-info>
 
                 <x-dashboard.service-info color="blue" icon="analytics" title="Dados" desc="Link de internet dedicado ou compartilhado. Redes MPLS, L2L, Clear Channel e Fibra apagada."></x-dashboard.service-info>
-
-                {{--<div>
-                    <h2 class="text-lg font-bold">Lorem, ipsum dolor.</h2>
-
-                    <p class="mt-1 text-sm text-gray-300">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Error
-                        cumque tempore est ab possimus quisquam reiciendis tempora animi!
-                        Quaerat, saepe?
-                    </p>
-                </div>--}}
-
-                </div>
-
             </div>
+
+            <div class="flex max-w-xl mx-auto flex-col mt-8 text-center">
+                <h2 class="text-lg font-bold">Conhecemos o caminho</h2>
+
+                <p class="mt-1 text-sm text-gray-500">
+                    Com a expertise adquirida e com profissionais comprometidos e capacitados, conhecemos todos os caminhos necessários para atender as necessidades dos clientes.
+                </p>
+            </div>
+
         </div>
     </section>
 
@@ -82,7 +78,7 @@
                 >
                     <img
                         alt="NossaMissao"
-                        src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+                        src="https://media.istockphoto.com/id/1284066336/photo/modern-gadgets-in-interior-of-coworking-office-during-covid-19-epidemic.jpg?b=1&s=612x612&w=0&k=20&c=ZPy5JLzo-qVIW1aKqWORKTDSmaYM_vyBo1Nd-0zuo6k="
                         class="absolute inset-0 h-full w-full object-cover"
                     />
                 </div>
@@ -107,6 +103,74 @@
                     </a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!--
+  Heads up! 👋
+
+  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
+
+  Plugins:
+    - @tailwindcss/forms
+-->
+
+    <section class="bg-gray-50">
+        <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+            <div class="mx-auto max-w-lg text-center">
+                <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
+                    Vamos começar!
+                </h2>
+
+                <p class="hidden text-gray-500 sm:mt-4 sm:block">
+                    Estamos ansiosos para fornecer um orçamento para atender às suas necessidades tecnológicas. Para que possamos prosseguir, por favor, preencha o campo abaixo com seu endereço de e-mail:
+                </p>
+            </div>
+
+            <div class="mx-auto mt-8 max-w-xl">
+                <form action="#" class="sm:flex sm:gap-4">
+                    <div class="sm:flex-1">
+                        <label for="email" class="sr-only">Email</label>
+
+                        <input
+                            type="email"
+                            placeholder="Digite seu e-mail"
+                            class="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400"
+                        />
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-blue-600 px-5 py-3 text-white transition focus:outline-none focus:ring hover:bg-blue-700 focus:ring-yellow-400 sm:mt-0 sm:w-auto"
+                    >
+                        <span class="text-sm font-medium"> Continuar </span>
+
+                        <svg
+                            class="h-5 w-5 rtl:rotate-180"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"
+                            />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+
+            <div class="mx-auto pt-4 max-w-lg text-center">
+                <p class="hidden text-gray-500 sm:mt-4 sm:block">
+                    Fique tranquilo(a), <b>levamos a privacidade dos nossos clientes a sério</b>. Seus dados pessoais serão tratados com total confidencialidade e não serão compartilhados com terceiros sem o seu consentimento.
+                </p>
+            </div>
+
         </div>
     </section>
 
