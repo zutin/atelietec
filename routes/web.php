@@ -9,13 +9,29 @@ use App\Http\Controllers\{
     CarrierController,
 };
 
-Route::get('/', function () {
-    return view('index');
-})->name('index');
+Route::prefix('/')->group(function () {
+    Route::get('', function () {
+        return view('home.index');
+    })->name('index');
 
-Route::get('/telefonia', function () {
-    return view('telefonia');
-})->name('telefonia');
+    Route::get('/telefonia', function () {
+        return view('home.telefonia');
+    })->name('telefonia');
+
+    Route::get('/about', function () {
+        return view('home.about');
+    })->name('about');
+
+    Route::get('/services', function () {
+        return view('home.services');
+    })->name('services');
+});
+
+Route::prefix('/contact')->group(function () {
+    Route::get('/', function () {
+        return view('home.contact');
+    })->name('contact');
+});
 
 Route::middleware('auth')->group(function () {
     Route::prefix('/noc')->group(function () {

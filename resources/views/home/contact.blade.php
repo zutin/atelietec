@@ -6,7 +6,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <h1 class="font-semibold text-center text-2xl text-gray-800 leading-tight">
-                        {{ __('TELEFONIA IP') }}
+                        {{ __('Contato') }}
                     </h1>
                 </div>
             </div>

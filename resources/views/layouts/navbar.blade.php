@@ -17,13 +17,13 @@
                     <x-nav-link :href="route('index')" :active="request()->routeIs('index')">
                         {{ __('Home') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('index')" :active="request()->routeIs('noc')">
+                    <x-nav-link :href="route('about')" :active="request()->routeIs('about')">
                         {{ __('Quem somos') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('telefonia')" :active="request()->routeIs('telefonia')">
+                    <x-nav-link :href="route('services')" :active="request()->routeIs('services')">
                         {{ __('Serviços') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('index')" :active="request()->routeIs('noc')">
+                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                         {{ __('Contato') }}
                     </x-nav-link>
                 </div>
@@ -48,13 +48,13 @@
             <x-responsive-nav-link :href="route('index')" :active="request()->routeIs('index')">
                 {{ __('Home') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('index')" :active="request()->routeIs('noc')">
+            <x-responsive-nav-link :href="route('about')" :active="request()->routeIs('about')">
                 {{ __('Quem somos') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('index')" :active="request()->routeIs('noc')">
+            <x-responsive-nav-link :href="route('services')" :active="request()->routeIs('services')">
                 {{ __('Serviços') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('index')" :active="request()->routeIs('noc')">
+            <x-responsive-nav-link :href="route('contact')" :active="request()->routeIs('contact')">
                 {{ __('Contato') }}
             </x-responsive-nav-link>
         </div>

@@ -6,7 +6,7 @@
 ])
 
 <div class="flex items-start gap-4">
-    <span class="shrink-0 text-white material-symbols-outlined rounded-lg bg-{{ $color }}-600 p-4">
+    <span class="shrink-0 text-white material-symbols-outlined rounded-lg bg-{{ $color }}-600 transition p-4">
         {{ $icon }}
     </span>
 
