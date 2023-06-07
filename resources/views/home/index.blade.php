@@ -1,7 +1,7 @@
 <x-guest-layout>
 
     <section class="relative">
-        <div class="bg-[url('/storage/app/public/image/index.jpg')] bg-cover min-h-screen">
+        <div class="bg-[url('https://static.vecteezy.com/ti/fotos-gratis/p3/2268491-fundo-de-praia-vazio-gratis-foto.jpg')] bg-cover min-h-screen">
 
             <div class="bg-black bg-opacity-30 absolute top-0 left-0 min-h-full min-w-full"></div>
                 <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center relative">
