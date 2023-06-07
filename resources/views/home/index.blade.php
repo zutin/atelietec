@@ -145,7 +145,7 @@
                         type="submit"
                         class="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-blue-600 px-5 py-3 text-white transition hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:mt-0 sm:w-auto"
                     >
-                        <span class="text-sm font-medium"> Continuar </span>
+                        <span class="text-base font-medium"> Continuar </span>
 
                         <svg
                             class="h-5 w-5 rtl:rotate-180"
