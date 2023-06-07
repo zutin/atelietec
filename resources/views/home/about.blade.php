@@ -3,7 +3,7 @@
 
     <div class="min-h-screen">
 
-        <div class="max-w-full mx-auto mt-0.5 sm:px-6 bg-white p-16 lg:px-8">
+        <div class="max-w-full mx-auto sm:px-6 bg-gray-50 p-16 lg:px-8">
 
             <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
                 <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
@@ -27,7 +27,7 @@
 
         </div>
 
-        <div class="max-w-full mx-auto sm:px-6 bg-gray-50 p-16 lg:px-8">
+        <div class="max-w-full mx-auto sm:px-6 bg-white p-16 lg:px-8">
 
             <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
                 <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
@@ -48,7 +48,7 @@
 
         </div>
 
-        <div class="max-w-full mx-auto sm:px-6 bg-white p-16 lg:px-8">
+        <div class="max-w-full mx-auto sm:px-6 bg-gray-50 p-16 lg:px-8">
 
             <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
                 <div class="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
@@ -75,18 +75,17 @@
 
         </div>
 
-        <div class="max-w-full mx-auto sm:px-6 bg-gray-50 p-16 lg:px-8">
+        <div class="max-w-full mx-auto sm:px-6 p-16 lg:px-8">
 
             <div class="container m-auto px-6 text-gray-600 md:px-12 xl:px-6">
                 <div class="space-y-6 md:space-y-0 justify-center md:flex md:gap-6 lg:items-center lg:gap-12">
                     <div class="md:7/12 lg:w-6/12">
-                        <h2 class="text-2xl text-center text-gray-900 font-bold md:text-4xl">Trabalhe conosco</h2>
+                        <h2 class="text-2xl text-center text-gray-900 font-bold md:text-4xl">Conheça nossos serviços</h2>
                         <p class="mt-6 text-gray-600 text-center">
-                            Convidamos você a entrar em contato com nossa empresa! <br>Nossa equipe está pronta para ouvir suas necessidades, oferecer soluções personalizadas e estabelecer uma
-                            parceria de confiança, ajudando-o a alcançar o sucesso por meio da transformação digital.
+                            Descubra nossos serviços de tecnologia e telecomunicações para impulsionar o sucesso do seu negócio. Clique no botão abaixo para explorar as soluções de Tecnologia, Telefonia e Dados que oferecemos, e leve sua empresa a um novo nível de produtividade, comunicação e conectividade.
                         </p>
                         <div class="justify-center flex">
-                            <a href="{{ route('contact') }}" class="mt-6 justify-center text-center text-white bg-blue-500 hover:bg-blue-600 font-bold py-4 px-8 rounded-lg">Entrar em contato</a>
+                            <a href="{{ route('services') }}" class="mt-6 justify-center text-center text-white bg-blue-500 hover:bg-blue-600 font-bold py-4 px-8 rounded-lg">Nossos serviços</a>
                         </div>
 
                     </div>
