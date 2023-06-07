@@ -20,10 +20,10 @@
                         </p>
 
                         <div class="mt-8 flex flex-wrap justify-center gap-4">
-                            <a class="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto" href="/get-started">
+                            <a class="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto" href="javascript:void(0);" onclick="scrollToContact()">
                                 Quero começar
                             </a>
-                            <a class="block w-full rounded bg-gray-50 px-12 py-3 text-sm font-medium text-blue-600 shadow hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring active:text-blue-500 sm:w-auto" href="/about">
+                            <a class="block w-full rounded bg-gray-50 px-12 py-3 text-sm font-medium text-blue-600 shadow hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring active:text-blue-500 sm:w-auto" href="javascript:void(0);" onclick="scrollToServices()">
                                 Saiba mais
                             </a>
                         </div>
@@ -38,7 +38,7 @@
     <section class="bg-gray-50">
         <div class="max-w-screen-xl mx-auto px-4 py-8 sm:py-12 sm:px-6 lg:py-16 lg:px-8">
 
-            <div class="max-w-xl mx-auto">
+            <div id="services" class="max-w-xl mx-auto">
                 <h2 class="text-3xl text-center font-bold sm:text-4xl">Nossos serviços</h2>
                 <p class="mt-4 text-center text-gray-500">
                     Desde a implementação de soluções de redes inteligentes até o
@@ -96,10 +96,10 @@
                     </p>
 
                     <a
-                        href="#"
+                        href="about"
                         class="mt-8 inline-block rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500"
                     >
-                        Faça um orçamento
+                        Sobre nossa empresa
                     </a>
                 </div>
             </div>
@@ -116,7 +116,7 @@
 -->
 
     <section class="bg-gray-50">
-        <div class="p-8 md:p-12 lg:px-16 lg:py-24">
+        <div id="start" class="p-8 md:p-12 lg:px-16 lg:py-24">
             <div class="mx-auto max-w-lg text-center">
                 <h2 class="text-2xl font-bold text-gray-900 md:text-3xl">
                     Vamos começar!
@@ -177,3 +177,15 @@
     @include('components.dashboard.footer')
 
 </x-guest-layout>
+
+<script>
+    function scrollToServices() {
+        var destino = document.getElementById("services");
+        destino.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function scrollToContact() {
+        var destino = document.getElementById("start");
+        destino.scrollIntoView({ behavior: "smooth" });
+    }
+</script>
