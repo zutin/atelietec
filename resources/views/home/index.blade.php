@@ -7,10 +7,10 @@
                 <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center relative">
                     <div class="mx-auto max-w-xl text-center">
 
-                        <h1 class="text-3xl font-extrabold sm:text-5xl text-blue-700">
+                        <h1 class="text-3xl font-extrabold sm:text-5xl text-white">
                             AtelieTec
                         </h1>
-                        <strong class="text-2xl font-extrabold sm:text-4xl text-white sm:block">
+                        <strong class="text-2xl font-extrabold sm:text-4xl text-blue-600 sm:block">
                             Consultoria em Tecnologia e Telecom
                         </strong>
 
@@ -105,15 +105,6 @@
             </div>
         </div>
     </section>
-
-    <!--
-  Heads up! 👋
-
-  This component comes with some `rtl` classes. Please remove them if they are not needed in your project.
-
-  Plugins:
-    - @tailwindcss/forms
--->
 
     <section class="bg-gray-50">
         <div id="start" class="p-8 md:p-12 lg:px-16 lg:py-24">

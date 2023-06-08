@@ -12,6 +12,7 @@ use App\Models\{
     TicketFacility,
 };
 use App\Services\AlertService;
+use App\Notifications\TicketCreated;
 
 class TicketController extends Controller
 {
@@ -64,6 +65,7 @@ class TicketController extends Controller
 
     public function store(StoreTicketFacilityRequest $request)
     {
+        $user = Auth::user();
         $request = $request->validated();
 
         $facility = Facility::where('deleted_at', null)->findOrFail($request['facility_id']);
@@ -77,6 +79,7 @@ class TicketController extends Controller
 
             $ticketFacility = TicketFacility::create($ticketFacilityData);
             $this->alertService->alert('success', 'Alerta registrado com sucesso!');
+            $user->notify(new TicketCreated($user, $ticketFacility));
 
             return redirect()->route('noc.index');
         }

@@ -6,10 +6,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\{
     User,
-    Facility,
     TicketFacility,
-    Ticket,
 };
+use App\Notifications\TicketFinished;
 use App\Services\AlertService;
 
 class DashboardController extends Controller
@@ -83,6 +82,9 @@ class DashboardController extends Controller
     {
         $call->delete();
         $this->alertService->alert('success', 'Chamado finalizado com sucesso!');
+        $user = Auth::user();
+
+        $user->notify(new TicketFinished($user, $call));
 
         return redirect()->route('noc.index');
     }

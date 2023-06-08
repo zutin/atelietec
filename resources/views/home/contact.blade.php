@@ -34,15 +34,15 @@
                         <h3 class="text-2xl text-gray-900 font-semibold">Entre em contato conosco</h3>
                         <p class="text-gray-600"> Preencha os campos abaixo: </p>
                         <div class="flex space-x-5 mt-3">
-                            <input type="text" name="name" id="name" placeholder="Nome *" class="border p-2  w-1/2">
+                            <input type="text" required name="name" id="name" placeholder="Nome *" class="border p-2  w-1/2">
                             <input type="tel" name="phone" id="phone" placeholder="Telefone" class="border p-2 w-1/2">
                         </div>
                         @if($email)
-                            <input type="email" name="email" class="border p-2 w-full mt-3" value="{{ $email }}">
+                            <input type="email" required name="email" class="border p-2 w-full mt-3" value="{{ $email }}">
                         @else
-                            <input type="email" name="email" id="email" value="{{ old('email') }}" placeholder="E-mail *" class="border p-2 w-full mt-3">
+                            <input type="email" required name="email" id="email" value="{{ old('email') }}" placeholder="E-mail *" class="border p-2 w-full mt-3">
                         @endif
-                        <textarea name="description" id="description" cols="10" rows="3" placeholder="Explique sua situação e serviço desejado" class="border p-2 mt-3 w-full"></textarea>
+                        <textarea name="description" id="description" required cols="10" rows="3" placeholder="Explique sua situação e serviço desejado *" class="border p-2 mt-3 w-full"></textarea>
                         <p class="font-bold text-sm mt-3">Termos de Uso *</p>
                         <div class="flex items-baseline space-x-2 mt-2">
                             <input type="checkbox" id="aceito" class="inline-block">

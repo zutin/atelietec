@@ -25,8 +25,8 @@
                 </li>
 
                 <li>
-                    <a class="text-gray-700 transition hover:text-blue-700/75" href="/">
-                        Ajuda
+                    <a class="text-gray-700 transition hover:text-blue-700/75" href="/noc">
+                        NOC
                     </a>
                 </li>
             </ul>
