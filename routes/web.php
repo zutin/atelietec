@@ -7,16 +7,13 @@ use App\Http\Controllers\{
     FacilityController,
     TicketController,
     CarrierController,
+    IndexController,
+    ContactController,
 };
 
 Route::prefix('/')->group(function () {
-    Route::get('', function () {
-        return view('home.index');
-    })->name('index');
-
-    Route::get('/telefonia', function () {
-        return view('home.telefonia');
-    })->name('telefonia');
+    Route::get('', [IndexController::class, 'index'])->name('index');
+    Route::post('/send-email', [IndexController::class, 'sendEmail'])->name('send.email');
 
     Route::get('/about', function () {
         return view('home.about');
@@ -28,9 +25,7 @@ Route::prefix('/')->group(function () {
 });
 
 Route::prefix('/contact')->group(function () {
-    Route::get('/', function () {
-        return view('home.contact');
-    })->name('contact');
+    Route::get('', [ContactController::class, 'index'])->name('contact');
 });
 
 Route::middleware('auth')->group(function () {

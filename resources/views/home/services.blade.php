@@ -33,7 +33,7 @@
     </div>
 
     <div id="tecnologia" class="max-w-full mx-auto bg-white sm:px-6 lg:px-8">
-        <div class="container m-auto px-6 pt-16 pb-8 text-gray-600 md:px-12 xl:px-6">
+        <div class="container m-auto px-6 py-16 text-gray-600 md:px-12 xl:px-6">
             <div class="space-y-6 md:space-y-0 justify-center md:flex md:gap-6 lg:items-center lg:gap-12">
 
                 <div class="md:7/12 lg:w-6/12">
@@ -110,9 +110,7 @@
                                 </details>
                             </div>
                         </div>
-                        <div class="justify-center flex">
-                            <a href="javascript:void(0);" onclick="scrollToContact()" class="block mt-8 font-medium text-blue-600">Entrar em contato</a>
-                        </div>
+
                     </div>
 
                 </div>
@@ -121,7 +119,7 @@
     </div>
 
     <div id="telefonia" class="max-w-full mx-auto bg-gray-50 sm:px-6 lg:px-8">
-        <div class="container m-auto px-6 pt-16 pb-8 text-gray-600 md:px-12 xl:px-6">
+        <div class="container m-auto px-6 py-16 text-gray-600 md:px-12 xl:px-6">
             <div class="space-y-6 md:space-y-0 justify-center md:flex md:gap-6 lg:items-center lg:gap-12">
 
                 <div class="md:7/12 lg:w-6/12">
@@ -149,7 +147,7 @@
                                     </span>
                                     </summary>
                                     <p class="text-neutral-700 px-2 mt-3 group-open:animate-fadeIn">
-                                        Nosso serviço de telefonia fixa oferece uma solução confiável e tradicional para as necessidades de comunicação empresarial. Com a telefonia fixa, as empresas podem contar com linhas telefônicas estáveis e de alta qualidade para realizar chamadas locais, nacionais e internacionais. Nossa equipe especializada auxilia na configuração e gerenciamento do sistema de telefonia fixa, garantindo comunicação clara e confiável, recursos como correio de voz e transferência de chamadas, e a possibilidade de conexão com outros sistemas de telecomunicações.
+                                        O Serviço Telefônico Fixo Comutado (STFC) é o serviço de telecomunicações que, por meio de transmissão de voz e de outros sinais, destina-se à comunicação entre pontos fixos determinados, utilizando processos de telefonia. São modalidades do Serviço Telefônico Fixo Comutado destinado ao uso do público em geral o serviço local, o serviço de longa distância nacional e o serviço de longa distância internacional.
                                     </p>
                                 </details>
                             </div>
@@ -165,7 +163,11 @@
                                     </span>
                                     </summary>
                                     <p class="text-neutral-700 px-2 mt-3 group-open:animate-fadeIn">
-                                        Nosso serviço de telefonia móvel oferece uma solução flexível e móvel para atender às necessidades de comunicação em constante movimento. Com a telefonia móvel, as empresas podem aproveitar a conveniência de dispositivos móveis e redes de comunicação sem fio para se manterem conectadas em qualquer lugar. Oferecemos planos e dispositivos móveis adequados às necessidades de cada empresa, permitindo chamadas, mensagens de texto, acesso à internet e recursos avançados, como e-mail corporativo e aplicativos de produtividade.
+                                        Enquanto as reclamações junto a Anatel por conta de telefonia empresarial aumentam, a busca por empresas que fazem consultoria em telefonia móvel, fixa e internet aumentam, uma vez que as mesmas fazem um comparativo entre todas as operadoras, que atendam as necessidades do nosso cliente.
+                                        <br>
+                                        Antigamente, quando um empresa precisava de telefonia móvel, planos com aparelhos, trocar de operadora (portabilidade), a mesma era obrigada a entrar em contato via telefone com cada operadora concorrente da atual.
+                                        <br>
+                                        Com a AtelieTec, faremos um levantamento com todas as operadoras e apresentamos aos nossos clientes as opções e indicamos a que melhor se encaixa em suas necessidades.
                                     </p>
                                 </details>
                             </div>
@@ -181,15 +183,21 @@
                                     </span>
                                     </summary>
                                     <p class="text-neutral-700 px-2 mt-3 group-open:animate-fadeIn">
-                                        Nosso serviço de telefonia IP (Internet Protocol) oferece uma solução moderna e integrada para a comunicação empresarial. Com a telefonia IP, as empresas podem utilizar a infraestrutura de rede existente para realizar chamadas de voz por meio da internet. Nossa equipe especializada em telefonia IP configura sistemas de telefonia baseados em IP, permitindo recursos avançados, como chamadas em conferência, encaminhamento de chamadas, integração com aplicativos de colaboração e acesso remoto. A telefonia IP oferece uma comunicação eficiente e econômica, aproveitando os benefícios da tecnologia de internet para melhorar a produtividade e a conectividade das empresas.
+                                        A Telefonia iP pode facilitar tarefas difíceis em redes tradicionais. Chamadas entrantes podem ser automaticamente roteadas para o telefone iP, independentemente da localização na rede. Por exemplo, é possível levar um telefone iP para uma viagem, e conectá-lo à Internet podendo receber e efetuar ligações, contanto que a conexão seja rápida e estável o suficiente.
+                                        <br>
+                                        O fato da tecnologia ser atrelada à Internet também traz a vantagem de poder integrar telefones iP a outros serviços como conversação de vídeo, mensageiros instantâneos, compartilhamento de arquivos e gerenciamento de listas telefônicas. Estar relacionado à Internet também significa que o custo da chamada não depende da localização geodésica e dos horários de utilização, ambos os parâmetros usados na cobrança na telefonia fixa e móvel, e cujos valores variam de operadora a operadora.
+                                        <br>
+                                        Vários pacotes de serviço de telefonia iP, incluem funcionalidades que em redes tradicionais seriam cobradas à parte, como conferência a três, redirecionamento de chamadas, rediscagem automática, identificador de chamadas, URA e PABX.
+                                        <br>
+                                        Entretanto, apesar de amplamente utilizado através de computadores, a telefonia iP pode ser utilizada através de adaptadores para telefones analógicos ou gateways VoIP, que são aparelhos que podem ser conectados diretamente em uma conexão de internet e a um aparelho telefônico comum ou a um PABX em posições de troncos ou ramais. Eles fornecem a interligação entre as redes IP e fixas.
+                                        <br>
+                                        Bem como, pode ser utilizado diretamente em aparelhos telefônicos iP, com ótima qualidade e serviços muito avançados.
                                     </p>
                                 </details>
                             </div>
                         </div>
                     </div>
-                    <div class="justify-center flex">
-                        <a href="javascript:void(0);" onclick="scrollToContact()" class="block mt-8 font-medium text-blue-600">Entrar em contato</a>
-                    </div>
+
 
                 </div>
             </div>
@@ -197,7 +205,7 @@
     </div>
 
     <div id="dados" class="max-w-full mx-auto bg-white sm:px-6 lg:px-8">
-        <div class="container m-auto px-6 pt-16 pb-8 text-gray-600 md:px-12 xl:px-6">
+        <div class="container m-auto px-6 py-16 text-gray-600 md:px-12 xl:px-6">
             <div class="space-y-6 md:space-y-0 justify-center md:flex md:gap-6 lg:items-center lg:gap-12">
 
                 <div class="md:7/12 lg:w-6/12">
@@ -209,9 +217,130 @@
                         Ao escolher nosso serviço de dados, as empresas podem contar com uma infraestrutura de rede confiável e robusta, permitindo o acesso rápido e seguro a recursos online, comunicação eficiente e transferência de dados sem interrupções. Nossas soluções são escaláveis e flexíveis, garantindo que as empresas possam acompanhar o crescimento e as mudanças em suas necessidades de conectividade. Estamos comprometidos em fornecer serviços de dados confiáveis e de alta velocidade que capacitam as empresas a operar de forma eficiente e competitiva.
                     </p>
 
-                    <div class="justify-center flex">
-                        <a href="javascript:void(0);" onclick="scrollToContact()" class="block mt-8 font-medium text-blue-600">Entrar em contato</a>
+                    <div class="max-w-screen-xl mx-auto px-5 bg-white">
+                        <div class="flex flex-col mt-2 items-center">
+                            <p class="text-neutral-500 text-xl mt-3">
+                                Contamos com as seguintes tecnologias:
+                            </p>
+                        </div>
+                        <div class="grid divide-y divide-neutral-200 bg-gray-50 hover:bg-gray-100 rounded-xl mx-auto mt-4">
+                            <div class="py-5">
+                                <details class="group">
+                                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                        <span class="ml-2">Internet Dedicada</span>
+                                        <span class="transition group-open:rotate-180">
+                                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <p class="text-neutral-700 px-2 mt-3 group-open:animate-fadeIn">
+                                        Ideal para empresas que precisam de conexão confiável e de alta qualidade.
+                                        <br>
+                                        A Internet Corporativa é uma conexão dedicada, simétrica, permanente, com estabilidade de sinal de alta capacidade e tráfego garantido e com velocidades de acordo com a sua necessidade.
+                                        <br>
+                                        Oferecemos um trabalho de consultoria para levar a melhor Operadora com o melhor custo benefício para sua conexão.
+                                        <br><br>
+                                        <strong>VANTAGENS</strong>
+                                        <br>
+
+                                        • Sua empresa tem a garantia de usufruir 100% do que foi contratado;
+                                        <br>
+                                        • Melhor performance dos sistemas de gestão e aplicações da sua empresa;
+                                        <br>
+                                        • Versatilidade para você mudar a velocidade quando o seu negócio precisar;
+                                        <br>
+                                        • Velocidades de download e upload idênticas;
+                                        <br>
+                                        • Maior agilidade para seu negócio com uma internet dedicada de alta disponibilidade;
+                                        <br>
+                                        • Monitoramento e suporte técnico 24x7;
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="grid divide-y divide-neutral-200 bg-gray-50 hover:bg-gray-100 rounded-xl mx-auto mt-2">
+                            <div class="py-5">
+                                <details class="group">
+                                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                        <span class="ml-2">MPLS - L2L</span>
+                                        <span class="transition group-open:rotate-180">
+                                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <p class="text-neutral-700 px-2 mt-3 group-open:animate-fadeIn">
+                                        Integre as suas unidades e ganhe agilidade e segurança na comunicação de dados da sua empresa.
+                                        <br>
+                                        Com a Conexão Privada MPLS ou L2L será possível interligar sua matriz a unidades remotas, parceiros de negócios e utilizar com muita eficiência aplicações especiais de transmissão de arquivos e de serviços de multimídia.
+                                        <br>
+                                        Nesta solução sua empresa passa a contar com um canal de comunicação direto entre dois pontos, com altas velocidades, utilizando tecnologias de última geração e com garantia de disponibilidade, total privacidade e banda 100% garantida.
+                                        <br>
+                                        <br>
+                                        <strong>VANTAGENS</strong>
+                                        <br>
+                                        • Melhor desempenho de rede incluindo aplicações desenvolvidas para redes locais;
+                                        <br>
+                                        • Maior integração entre unidades, com troca de informações simultâneas;
+                                        <br>
+                                        • Maior confiabilidade na transmissão dos dados da sua empresa;
+                                        <br>
+                                        • Serviço prestado através de estrutura de rede própria com abrangência nacional;
+                                        <br>
+                                        • Mais produtividade e eficiência para seu negócio;
+                                        <br>
+                                        • Informações compartilhadas em alta velocidade;
+                                        <br>
+                                        • Dados trafegados em rede exclusiva, monitorada proativamente em qualquer dia e horário;
+                                        <br>
+                                        • Conexão sem oscilação de velocidade;
+                                        <br>
+                                        • Flexibilidade para alterar a velocidade do link para atender eventuais necessidades;
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                        <div class="grid divide-y divide-neutral-200 bg-gray-50 hover:bg-gray-100 rounded-xl mx-auto mt-2">
+                            <div class="py-5">
+                                <details class="group">
+                                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none">
+                                        <span class="ml-2">VPN</span>
+                                        <span class="transition group-open:rotate-180">
+                                            <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path>
+                                            </svg>
+                                        </span>
+                                    </summary>
+                                    <p class="text-neutral-700 px-2 mt-3 group-open:animate-fadeIn">
+                                        Comunicação direta entre todas as suas unidades, uma rede mais simples e uma operação mais eficiente para seu negócio.
+                                        <br>
+                                        Com o VPN, você interliga todas as suas unidades e tem comunicação direta entre elas, em uma rede privada gerenciada. A solução traz confiabilidade e desempenho na transmissão de dados multimídia proporcionando melhor uso do recurso de rede.
+                                        <br>
+                                        É possível ainda otimizar a utilização da banda e assim reduzir os custos com a conectividade. Ao contratar esta solução, cada unidade consumirá a banda que realmente necessita, e quem define isto, é você, mais precisão, menos desperdício.
+                                        <br>
+                                        <br>
+                                        <strong>VANTAGENS</strong>
+                                        <br>
+                                        • Possibilidade de configurar uma rede multiponto roteada;
+                                        <br>
+                                        • Entrega total da banda contratada;
+                                        <br>
+                                        • Simplicidade para administrar toda rede através de um único atendimento; disponível 24 horas por dia, 7 dias por semana;
+                                        <br>
+                                        • Maior confiabilidade na transmissão dos dados da sua empresa;
+                                        <br>
+                                        • Serviço prestado através de estrutura de rede própria com abrangência nacional;
+                                        <br>
+                                        • Mais produtividade e eficiência para seu negócio;
+                                        <br>
+                                        • Informações compartilhadas em alta velocidade;
+                                        <br>
+                                        • Conexão sem oscilação de velocidade;
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+
                     </div>
+
                 </div>
 
             </div>

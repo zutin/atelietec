@@ -128,12 +128,13 @@
             </div>
 
             <div class="mx-auto mt-8 max-w-xl">
-                <form action="#" class="sm:flex sm:gap-4">
+                <form method="POST" action="{{ url('/send-email') }}" class="sm:flex sm:gap-4">
+                    @csrf
                     <div class="sm:flex-1">
                         <label for="email" class="sr-only">Email</label>
 
                         <input
-                            type="email"
+                            type="email" id="email" name="email" required
                             placeholder="Digite seu e-mail"
                             class="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400"
                         />
