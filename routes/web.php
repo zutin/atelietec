@@ -1,15 +1,13 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{
+use App\Http\Controllers\{CarrierController,
+    ContactController,
     DashboardController,
     FacilityController,
-    TicketController,
-    CarrierController,
     IndexController,
-    ContactController,
+    TicketController,
 };
+use Illuminate\Support\Facades\Route;
 
 Route::prefix('/')->group(function () {
     Route::get('', [IndexController::class, 'index'])->name('index');
@@ -59,4 +57,4 @@ Route::middleware('auth')->group(function () {
     });
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

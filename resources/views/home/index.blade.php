@@ -1,36 +1,39 @@
 <x-guest-layout>
 
     <section class="relative">
-        <div class="bg-[url('https://static.vecteezy.com/ti/fotos-gratis/p3/2268491-fundo-de-praia-vazio-gratis-foto.jpg')] bg-cover min-h-screen">
+        <div
+            class="bg-[url('https://static.vecteezy.com/ti/fotos-gratis/p3/2268491-fundo-de-praia-vazio-gratis-foto.jpg')] bg-cover min-h-screen">
 
             <div class="bg-black bg-opacity-30 absolute top-0 left-0 min-h-full min-w-full"></div>
-                <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center relative">
-                    <div class="mx-auto max-w-xl text-center">
+            <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center relative">
+                <div class="mx-auto max-w-xl text-center">
 
-                        <h1 class="text-3xl font-extrabold sm:text-5xl text-white">
-                            AtelieTec
-                        </h1>
-                        <strong class="text-2xl font-extrabold sm:text-4xl text-blue-600 sm:block">
-                            Consultoria em Tecnologia e Telecom
-                        </strong>
+                    <h1 class="text-3xl font-extrabold sm:text-5xl text-white">
+                        AtelieTec
+                    </h1>
+                    <strong class="text-2xl font-extrabold sm:text-4xl text-blue-600 sm:block">
+                        Consultoria em Tecnologia e Telecom
+                    </strong>
 
-                        <p class="mt-4 sm:text-lg/relaxed text-gray-50">
-                            Transformando desafios em oportunidades tecnológicas
-                            e conectando o futuro da sua empresa.
-                        </p>
+                    <p class="mt-4 sm:text-lg/relaxed text-gray-50">
+                        Transformando desafios em oportunidades tecnológicas
+                        e conectando o futuro da sua empresa.
+                    </p>
 
-                        <div class="mt-8 flex flex-wrap justify-center gap-4">
-                            <a class="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto" href="javascript:void(0);" onclick="scrollToContact()">
-                                Quero começar
-                            </a>
-                            <a class="block w-full rounded bg-gray-50 px-12 py-3 text-sm font-medium text-blue-600 shadow hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring active:text-blue-500 sm:w-auto" href="javascript:void(0);" onclick="scrollToServices()">
-                                Saiba mais
-                            </a>
-                        </div>
-
+                    <div class="mt-8 flex flex-wrap justify-center gap-4">
+                        <a class="block w-full rounded bg-blue-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-blue-700 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
+                           href="javascript:void(0);" onclick="scrollToContact()">
+                            Quero começar
+                        </a>
+                        <a class="block w-full rounded bg-gray-50 px-12 py-3 text-sm font-medium text-blue-600 shadow hover:text-blue-700 hover:bg-gray-100 focus:outline-none focus:ring active:text-blue-500 sm:w-auto"
+                           href="javascript:void(0);" onclick="scrollToServices()">
+                            Saiba mais
+                        </a>
                     </div>
+
                 </div>
             </div>
+        </div>
 
         </div>
     </section>
@@ -50,18 +53,22 @@
             <div class="mt-8 grid grid-cols-1 gap-8 md:mt-16 md:grid-cols-2
                 md:gap-12 lg:grid-cols-3">
 
-                <x-dashboard.service-info color="blue" icon="public" title="Tecnologia" desc="Com um poderoso conjunto de soluções de nível empresarial que aumentam a produtividade das pequenas e médias empresas."></x-dashboard.service-info>
+                <x-dashboard.service-info color="blue" icon="public" title="Tecnologia"
+                                          desc="Com um poderoso conjunto de soluções de nível empresarial que aumentam a produtividade das pequenas e médias empresas."></x-dashboard.service-info>
 
-                <x-dashboard.service-info color="blue" icon="deskphone" title="Telefonia" desc="Telefonia fixa e telefonia móvel, podem ser grandes aliados em nossas necessidades diárias."></x-dashboard.service-info>
+                <x-dashboard.service-info color="blue" icon="deskphone" title="Telefonia"
+                                          desc="Telefonia fixa e telefonia móvel, podem ser grandes aliados em nossas necessidades diárias."></x-dashboard.service-info>
 
-                <x-dashboard.service-info color="blue" icon="analytics" title="Dados" desc="Link de internet dedicado ou compartilhado. Redes MPLS, L2L, Clear Channel e Fibra apagada."></x-dashboard.service-info>
+                <x-dashboard.service-info color="blue" icon="analytics" title="Dados"
+                                          desc="Link de internet dedicado ou compartilhado. Redes MPLS, L2L, Clear Channel e Fibra apagada."></x-dashboard.service-info>
             </div>
 
             <div class="flex max-w-xl mx-auto flex-col mt-8 text-center">
                 <h2 class="text-lg font-bold">Conhecemos o caminho</h2>
 
                 <p class="mt-1 text-sm text-gray-500">
-                    Com a expertise adquirida e com profissionais comprometidos e capacitados, conhecemos todos os caminhos necessários para atender as necessidades dos clientes.
+                    Com a expertise adquirida e com profissionais comprometidos e capacitados, conhecemos todos os
+                    caminhos necessários para atender as necessidades dos clientes.
                 </p>
             </div>
 
@@ -114,7 +121,8 @@
                 </h2>
 
                 <p class="hidden text-gray-500 sm:mt-4 sm:block">
-                    Estamos ansiosos para fornecer um orçamento para atender às suas necessidades tecnológicas. Para que possamos prosseguir, por favor, preencha o campo abaixo com seu endereço de e-mail:
+                    Estamos ansiosos para fornecer um orçamento para atender às suas necessidades tecnológicas. Para que
+                    possamos prosseguir, por favor, preencha o campo abaixo com seu endereço de e-mail:
                 </p>
             </div>
 
@@ -159,7 +167,9 @@
 
             <div class="mx-auto pt-4 max-w-lg text-center">
                 <p class="hidden text-gray-500 sm:mt-4 sm:block">
-                    Fique tranquilo(a), <b>levamos a privacidade dos nossos clientes a sério</b>. Seus dados pessoais serão tratados com total confidencialidade e não serão compartilhados com terceiros sem o seu consentimento.
+                    Fique tranquilo(a), <b>levamos a privacidade dos nossos clientes a sério</b>. Seus dados pessoais
+                    serão tratados com total confidencialidade e não serão compartilhados com terceiros sem o seu
+                    consentimento.
                 </p>
             </div>
 
@@ -173,11 +183,11 @@
 <script>
     function scrollToServices() {
         var destino = document.getElementById("services");
-        destino.scrollIntoView({ behavior: "smooth" });
+        destino.scrollIntoView({behavior: "smooth"});
     }
 
     function scrollToContact() {
         var destino = document.getElementById("start");
-        destino.scrollIntoView({ behavior: "smooth" });
+        destino.scrollIntoView({behavior: "smooth"});
     }
 </script>

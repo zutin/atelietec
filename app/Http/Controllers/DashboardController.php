@@ -2,14 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use App\Models\{
-    User,
-    TicketFacility,
-};
+use Illuminate\Support\Facades\Notification;
+use App\Models\{TicketFacility, User,};
 use App\Notifications\TicketFinished;
 use App\Services\AlertService;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class DashboardController extends Controller
 {
@@ -18,9 +16,9 @@ class DashboardController extends Controller
     protected $alertService;
 
     public function __construct(
-        User $user,
+        User           $user,
         TicketFacility $ticketFacilities,
-        AlertService $alertService
+        AlertService   $alertService
     )
     {
         $this->user = $user;
@@ -31,7 +29,13 @@ class DashboardController extends Controller
     public function index()
     {
         $user = User::findOrFail(Auth::user()->id);
-        $ticketFacilities = TicketFacility::withTrashed()->orderBy('deleted_at', 'asc')->orderBy('id')->get();
+
+        if($user->role === 'admin') {
+            $ticketFacilities = TicketFacility::withTrashed()->orderBy('deleted_at', 'asc')->orderBy('id')->get();
+        }
+        else {
+            $ticketFacilities = TicketFacility::orderBy('deleted_at', 'asc')->orderBy('id')->get();
+        }
 
         return view('noc.index', compact('user', 'ticketFacilities'));
     }
@@ -46,16 +50,26 @@ class DashboardController extends Controller
             return redirect()->route('noc.index');
         }
 
-        $ticketFacilities = TicketFacility::whereHas('facility', function ($query) use ($search) {
-            $query->where('name', 'like', '%' . $search . '%');
-        })->orWhere('id', $search)
-            ->orWhere('protocol', $search)->withTrashed()->get();
+        if($user->role === 'admin') {
+            $ticketFacilities = TicketFacility::whereHas('facility', function ($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%');
+            })->orWhere('id', $search)
+                ->orWhere('protocol', $search)->withTrashed()->get();
+        } else {
+            $ticketFacilities = TicketFacility::whereHas('facility', function ($query) use ($search) {
+                $query->where('name', 'like', '%' . $search . '%');
+            })->orWhere('id', $search)
+                ->orWhere('protocol', $search)->get();
+        }
 
         return view('noc.index', compact('user', 'ticketFacilities'));
     }
 
     public function update(Request $request, $ticketFacility)
     {
+        $user = Auth::user();
+        $this->authorize('isAdmin', $user);
+
         try {
             $request->validate([
                 'protocol' => ['required', 'string', 'min:4', 'max:20'],
@@ -80,11 +94,13 @@ class DashboardController extends Controller
 
     public function destroy(TicketFacility $call)
     {
+        $user = Auth::user();
+        $this->authorize('isAdmin', $user);
+
         $call->delete();
         $this->alertService->alert('success', 'Chamado finalizado com sucesso!');
-        $user = Auth::user();
 
-        $user->notify(new TicketFinished($user, $call));
+        Notification::route('mail', 'noc@atelietec.com.br')->notify(new TicketFinished($user, $call));
 
         return redirect()->route('noc.index');
     }

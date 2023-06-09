@@ -6,9 +6,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-use App\Models\Ticket;
-use App\Models\Facility;
-
 
 class TicketFacility extends Model
 {
@@ -22,11 +19,13 @@ class TicketFacility extends Model
     ];
 
 
-    public function facility(){
+    public function facility()
+    {
         return $this->belongsTo(Facility::class, 'facility_id', 'id');
     }
 
-    public function ticket(){
+    public function ticket()
+    {
         return $this->belongsTo(Ticket::class, 'ticket_id', 'id');
     }
 }

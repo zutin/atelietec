@@ -4,7 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Facility;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
@@ -18,7 +17,8 @@ class Carrier extends Model
         'name',
     ];
 
-    public function facilities() {
+    public function facilities()
+    {
         return $this->hasMany(Facility::class, 'carrier_id', 'id');
     }
 }

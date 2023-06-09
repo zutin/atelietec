@@ -3,7 +3,6 @@
 namespace App\Notifications;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
 
@@ -13,6 +12,7 @@ class TicketFinished extends Notification
 
     protected $user;
     protected $ticketFacility;
+
     /**
      * Create a new notification instance.
      */
@@ -41,7 +41,7 @@ class TicketFinished extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('AtelieTec - Chamado #'.$this->ticketFacility->id.' finalizado')
+            ->subject('AtelieTec - Chamado #' . $this->ticketFacility->id . ' finalizado')
             ->markdown('mail.ticket.finished', ['user' => $this->user, 'ticketFacility' => $this->ticketFacility]);
     }
 

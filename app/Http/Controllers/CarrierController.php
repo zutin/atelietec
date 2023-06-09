@@ -2,14 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreCarrierRequest;
+use App\Models\{Carrier, User,};
+use App\Services\AlertService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\{
-    User,
-    Carrier,
-};
-use App\Services\AlertService;
-use App\Http\Requests\StoreCarrierRequest;
 
 class CarrierController extends Controller
 {
@@ -18,8 +15,8 @@ class CarrierController extends Controller
     protected $alertService;
 
     public function __construct(
-        User $user,
-        Carrier $carriers,
+        User         $user,
+        Carrier      $carriers,
         AlertService $alertService
     )
     {
@@ -31,14 +28,18 @@ class CarrierController extends Controller
     public function index()
     {
         $user = User::findOrFail(Auth::user()->id);
+        $this->authorize('isAdmin', $user);
+
         $carriers = Carrier::where('deleted_at', null)->orderBy('id')->get();
 
-        return view('noc.carriers.index', compact('user',  'carriers'));
+        return view('noc.carriers.index', compact('user', 'carriers'));
     }
 
     public function search(Request $request)
     {
         $user = User::findOrFail(Auth::user()->id);
+        $this->authorize('isAdmin', $user);
+
         $search = $request->input('search');
 
         if ($search === null || $search === '') {
@@ -55,22 +56,27 @@ class CarrierController extends Controller
 
     public function create()
     {
+        $user = User::findOrFail(Auth::user()->id);
+        $this->authorize('isAdmin', $user);
+
         return view('noc.carriers.create');
     }
 
     public function store(StoreCarrierRequest $request)
     {
+        $user = User::findOrFail(Auth::user()->id);
+        $this->authorize('isAdmin', $user);
+
         $request = $request->validated();
-        try{
+        try {
             $carrier = Carrier::create($request);
             $this->alertService->alert('success', 'Operadora cadastrada com sucesso!');
 
             return redirect()->route('noc.carriers.index');
-        }
-        catch(PDOException $e) {
+        } catch (PDOException $e) {
             $response['status'] = 0;
-            $response['msg']    = "Ops, algo inesperado aconteceu...";
-            $response['error']  = $e->getMessage();
+            $response['msg'] = "Ops, algo inesperado aconteceu...";
+            $response['error'] = $e->getMessage();
         }
 
         return $response;
@@ -78,6 +84,9 @@ class CarrierController extends Controller
 
     public function destroy(Carrier $carrier)
     {
+        $user = User::findOrFail(Auth::user()->id);
+        $this->authorize('isAdmin', $user);
+
         $carrier->delete();
         $this->alertService->alert('success', 'Operadora removida com sucesso!');
 

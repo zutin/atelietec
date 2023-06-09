@@ -2,14 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Models\{
-    User,
-    Facility,
-    Carrier,
-};
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
-use App\Rules\CarrierExistsRule;
 
 class StoreCarrierRequest extends FormRequest
 {
@@ -22,7 +15,8 @@ class StoreCarrierRequest extends FormRequest
     }
 
 
-    public function messages(){
+    public function messages()
+    {
         return [
             'name.required' => 'O campo nome é obrigatório',
         ];

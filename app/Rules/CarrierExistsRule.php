@@ -2,8 +2,8 @@
 
 namespace App\Rules;
 
-use Illuminate\Contracts\Validation\Rule;
 use App\Models\Carrier;
+use Illuminate\Contracts\Validation\Rule;
 
 class CarrierExistsRule implements Rule
 {

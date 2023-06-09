@@ -3,16 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreTicketFacilityRequest;
+use App\Models\{Facility, Ticket, TicketFacility, User,};
+use App\Notifications\TicketCreated;
+use App\Services\AlertService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use App\Models\{
-    User,
-    Facility,
-    Ticket,
-    TicketFacility,
-};
-use App\Services\AlertService;
-use App\Notifications\TicketCreated;
+use Illuminate\Support\Facades\Notification;
 
 class TicketController extends Controller
 {
@@ -23,11 +19,11 @@ class TicketController extends Controller
     protected $alertService;
 
     public function __construct(
-        User $user,
-        Facility $facilities,
-        Ticket $tickets,
+        User           $user,
+        Facility       $facilities,
+        Ticket         $tickets,
         TicketFacility $ticket_facilities,
-        AlertService $alertService
+        AlertService   $alertService
     )
     {
         $this->user = $user;
@@ -71,7 +67,7 @@ class TicketController extends Controller
         $facility = Facility::where('deleted_at', null)->findOrFail($request['facility_id']);
         $ticket = Ticket::where('deleted_at', null)->findOrFail($request['ticket_id']);
 
-        try{
+        try {
             $ticketFacilityData = [
                 'facility_id' => $facility->id,
                 'ticket_id' => $ticket->id,
@@ -79,14 +75,13 @@ class TicketController extends Controller
 
             $ticketFacility = TicketFacility::create($ticketFacilityData);
             $this->alertService->alert('success', 'Alerta registrado com sucesso!');
-            $user->notify(new TicketCreated($user, $ticketFacility));
+            Notification::route('mail', 'noc@atelietec.com.br')->notify(new TicketCreated($user, $ticketFacility));
 
             return redirect()->route('noc.index');
-        }
-        catch(PDOException $e) {
+        } catch (PDOException $e) {
             $response['status'] = 0;
-            $response['msg']    = "Ops, algo inesperado aconteceu...";
-            $response['error']  = $e->getMessage();
+            $response['msg'] = "Ops, algo inesperado aconteceu...";
+            $response['error'] = $e->getMessage();
 
             return $response;
         }

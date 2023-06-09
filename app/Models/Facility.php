@@ -4,9 +4,6 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-
-use App\Models\Carrier;
-use App\Models\TicketFacility;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Facility extends Model
@@ -22,7 +19,8 @@ class Facility extends Model
         'carrier_id',
     ];
 
-    public function carrier() {
+    public function carrier()
+    {
         return $this->belongsTo(Carrier::class, 'carrier_id', 'id');
     }
 

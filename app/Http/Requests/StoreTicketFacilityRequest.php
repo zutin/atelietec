@@ -2,13 +2,7 @@
 
 namespace App\Http\Requests;
 
-use App\Models\{
-    User,
-    Facility,
-    Ticket,
-};
 use Illuminate\Foundation\Http\FormRequest;
-use Illuminate\Validation\Rule;
 
 class StoreTicketFacilityRequest extends FormRequest
 {
@@ -22,7 +16,8 @@ class StoreTicketFacilityRequest extends FormRequest
     }
 
 
-    public function messages(){
+    public function messages()
+    {
         return [
             'facility_id.required' => 'Escolha uma unidade.',
             'facility_id.exists' => 'Unidade não encontrada.',
