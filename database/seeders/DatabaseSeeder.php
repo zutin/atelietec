@@ -14,19 +14,13 @@ class DatabaseSeeder extends Seeder
             'name' => 'Gian Lucca Quaglio',
             'role' => 'admin',
             'email' => 'gianluccaz@hotmail.com',
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', //password
+            'password' => '$2y$10$URpU/MYc0co5TOwHYFa8y.hTeY0T0UMO.Pb/7tmL75krjgqTGbH9S'
         ],
         [
             'name' => 'Sergio Quaglio',
             'role' => 'admin',
             'email' => 'sergio@quaglio.com.br',
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', //password
-        ],
-        [
-            'name' => 'User Test',
-            'role' => 'user',
-            'email' => 'test@test.com',
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', //password
+            'password' => '$2y$10$L0EnrC8qtJ7C78Vg0emWjuMxFUEUZ81B9wp0Q6OsWa7S9tF23MAra'
         ]
         ]);
 
