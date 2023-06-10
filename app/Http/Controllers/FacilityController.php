@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreFacilityRequest;
+use App\Rules\CarrierExistsRule;
 use App\Models\{Carrier, Facility, User,};
 use App\Services\AlertService;
 use Illuminate\Http\Request;
@@ -93,6 +94,51 @@ class FacilityController extends Controller
         }
 
         return $response;
+    }
+
+    public function edit($id)
+    {
+        $facility = Facility::findOrFail($id);
+        $carriers = Carrier::where('deleted_at', null)->get();
+
+        if (!$facility) {
+            $this->alertService->alert('success', 'Unidade não encontrada!');
+            return redirect()->back();
+        }
+
+        return view('noc.facilities.edit', compact('facility', 'carriers'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        try {
+            $facility = Facility::findOrFail($id);
+
+            if (!$facility) {
+                $this->alertService->alert('success', 'Unidade não encontrada!');
+                return redirect()->route('noc.facilities.index');
+            }
+
+            $validatedData = $request->validate([
+                'name' => ['required', 'max:255'],
+                'address' => ['required', 'max:255'],
+                'designation' => ['max:255'],
+                'carrier_id' => ['required', new CarrierExistsRule],
+            ]);
+
+            $facility->name = $validatedData['name'];
+            $facility->address = $validatedData['address'];
+            $facility->designation = $validatedData['designation'];
+            $facility->carrier_id = $validatedData['carrier_id'];
+
+            $facility->save();
+
+            $this->alertService->alert('success', 'Unidade atualizada com sucesso!');
+            return redirect()->route('noc.facilities.index');
+        } catch (\Exception $e) {
+            $this->alertService->alert('success', 'Ocorreu um erro ao atualizar a unidade: ' . $e->getMessage());
+            return redirect()->route('noc.facilities.index');
+        }
     }
 
     public function destroy(Facility $facility)

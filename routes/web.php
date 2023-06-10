@@ -40,6 +40,8 @@ Route::middleware('auth')->group(function () {
 
         Route::prefix('/facilities')->group(function () {
             Route::get('/', [FacilityController::class, 'index'])->name('noc.facilities.index');
+            Route::get('/edit/{id}/', [FacilityController::class, 'edit'])->name('facility.edit');
+            Route::put('/edit/{id}/submit', [FacilityController::class, 'update'])->name('facility.update');
             Route::get('/create', [FacilityController::class, 'create'])->name('noc.facilities.create');
             Route::get('/search', [FacilityController::class, 'search'])->name('noc.facilities.search');
             Route::delete('/destroy/{facility}', [FacilityController::class, 'destroy'])->name('noc.facilities.destroy');
