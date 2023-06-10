@@ -20,10 +20,15 @@ Route::prefix('/')->group(function () {
     Route::get('/services', function () {
         return view('home.services');
     })->name('services');
+
+    Route::get('/thank-you', function () {
+        return view('home.thank-you');
+    })->name('thank-you');
 });
 
 Route::prefix('/contact')->group(function () {
     Route::get('', [ContactController::class, 'index'])->name('contact');
+    Route::post('/send', [ContactController::class, 'store'])->name('contact.store');
 });
 
 Route::middleware('auth')->group(function () {

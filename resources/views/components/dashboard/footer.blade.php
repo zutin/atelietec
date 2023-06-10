@@ -1,7 +1,9 @@
 <footer aria-label="Site Footer" class="bg-white">
     <div class="mx-auto max-w-5xl px-4 py-2 sm:px-6 lg:px-8">
         <div class="flex justify-center">
+            <a href="/">
             <div class="w-[200px] h-[200px] bg-[url('/storage/app/public/image/logo.png')] bg-cover bg-center"></div>
+            </a>
         </div>
 
         <nav aria-label="Footer Nav" class="mt-2">
@@ -81,7 +83,7 @@
 
             <li>
                 <a
-                    href="/"
+                    href="https://www.twitter.com/atelietec/"
                     rel="noreferrer"
                     target="_blank"
                     class="text-gray-700 transition hover:text-blue-500/75"
@@ -101,7 +103,12 @@
             </li>
         </ul>
     </div>
-    <p class="mx-auto p-4 max-w-md text-center leading-relaxed text-gray-500">
-        © 2023 atelietec.com.br
-    </p>
+    <div>
+        <p class="mx-auto p-4 max-w-md text-sm text-center leading-relaxed text-gray-500">
+            Email: contato@atelietec.com.br
+            <br>Telefone: (11) 4580-0003
+            <br>© 2023 atelietec.com.br
+        </p>
+    </div>
+
 </footer>
