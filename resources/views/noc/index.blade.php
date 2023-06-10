@@ -65,7 +65,7 @@
                 @foreach($ticketFacilities as $call)
                     <tr class="odd:bg-gray-50">
                         @if(Auth::user()->role === 'admin')
-                            <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $call->id }}</td>
+                            <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $call->noc_protocol }}</td>
                             <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                                 {{ $call->facility->id }}
                             </td>

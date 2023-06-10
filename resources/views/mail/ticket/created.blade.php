@@ -2,7 +2,7 @@
 
 <strong>Um novo chamado foi criado.</strong><br>
 <br>
-Número do chamado: {{ $ticketFacility->id }}<br>
+Número do chamado: {{ $ticketFacility->noc_protocol }}<br>
 Data de criação: {{ $ticketFacility->created_at->format('d/m/Y H:i:s') }}<br>
 Criado por: {{ $user->name }}<br>
 <br>

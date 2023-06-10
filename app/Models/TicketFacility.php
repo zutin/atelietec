@@ -16,6 +16,7 @@ class TicketFacility extends Model
         'facility_id',
         'ticket_id',
         'protocol',
+        'noc_protocol',
     ];
 
 

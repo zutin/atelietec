@@ -53,12 +53,12 @@ class DashboardController extends Controller
         if($user->role === 'admin') {
             $ticketFacilities = TicketFacility::whereHas('facility', function ($query) use ($search) {
                 $query->where('name', 'like', '%' . $search . '%');
-            })->orWhere('id', $search)
+            })->orWhere('noc_protocol', $search)
                 ->orWhere('protocol', $search)->withTrashed()->get();
         } else {
             $ticketFacilities = TicketFacility::whereHas('facility', function ($query) use ($search) {
                 $query->where('name', 'like', '%' . $search . '%');
-            })->orWhere('id', $search)
+            })->orWhere('noc_protocol', $search)
                 ->orWhere('protocol', $search)->get();
         }
 

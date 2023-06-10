@@ -68,14 +68,33 @@ class TicketController extends Controller
         $ticket = Ticket::where('deleted_at', null)->findOrFail($request['ticket_id']);
 
         try {
+            $date = now();
+            $year = $date->format('Y');
+            $month = $date->format('m');
+            $day = $date->format('d');
+
+            $latestProtocol = TicketFacility::where('noc_protocol', 'LIKE', $year.$month.$day.'%')
+                ->orderBy('noc_protocol', 'desc')
+                ->first();
+
+            if ($latestProtocol) {
+                $latestNumber = intval(substr($latestProtocol->noc_protocol, -1)) + 1;
+                $noc_protocol = $year.$month.$day.$latestNumber;
+            } else {
+                $noc_protocol = $year.$month.$day.'1';
+            }
+
             $ticketFacilityData = [
                 'facility_id' => $facility->id,
                 'ticket_id' => $ticket->id,
+                'noc_protocol' => $noc_protocol,
             ];
 
             $ticketFacility = TicketFacility::create($ticketFacilityData);
             $this->alertService->alert('success', 'Alerta registrado com sucesso!');
+
             Notification::route('mail', 'noc@atelietec.com.br')->notify(new TicketCreated($user, $ticketFacility));
+            $user->notify(new TicketCreated($user, $ticketFacility));
 
             return redirect()->route('noc.index');
         } catch (PDOException $e) {

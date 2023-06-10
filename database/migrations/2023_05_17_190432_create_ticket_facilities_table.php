@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('ticket_facilities', function (Blueprint $table) {
             $table->increments('id')->unique();
+            $table->string('noc_protocol')->nullable();
             $table->integer('facility_id')->unsigned();
             $table->integer('ticket_id')->unsigned();
             $table->string('protocol')->nullable();

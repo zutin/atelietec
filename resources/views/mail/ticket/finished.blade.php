@@ -2,7 +2,7 @@
 
 <strong>Um chamado acaba de ser finalizado.</strong><br>
 <br>
-Número do chamado: {{ $ticketFacility->id }}<br>
+Número do chamado: {{ $ticketFacility->noc_protocol }}<br>
 Unidade: {{ $ticketFacility->facility->name }}<br>
 Data de finalização: {{ $ticketFacility->deleted_at->format('d/m/Y H:i:s') }}<br>
 Finalizado por: {{ $user->name }}<br>

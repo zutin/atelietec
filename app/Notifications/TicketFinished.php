@@ -41,7 +41,7 @@ class TicketFinished extends Notification
     public function toMail(object $notifiable): MailMessage
     {
         return (new MailMessage)
-            ->subject('AtelieTec - Chamado #' . $this->ticketFacility->id . ' finalizado')
+            ->subject('AtelieTec - Chamado #' . $this->ticketFacility->noc_protocol . ' finalizado')
             ->markdown('mail.ticket.finished', ['user' => $this->user, 'ticketFacility' => $this->ticketFacility]);
     }
 

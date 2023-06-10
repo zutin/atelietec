@@ -25,7 +25,7 @@
                                        type="search" name="search" placeholder="Pesquisar unidade...">
                                 <input
                                     class="ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-                                    type="submit" value="Pesquisar">
+                                    type="submit" id="searchButton" value="Pesquisar">
                                 @if(request()->has('search') && request()->input('search') !== '')
                                     <a href="{{ route('noc.tickets.index') }}"
                                        class="ml-2 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Limpar</a>
@@ -33,7 +33,7 @@
                             </div>
                         </form>
 
-                        <form method="POST" action="{{ route('noc.tickets.store') }}">
+                        <form id="storeAlert" method="POST" action="{{ route('noc.tickets.store') }}">
                             @csrf
                             <div class="mb-4">
                                 <label class="block text-gray-700 text-sm font-bold mb-2">Selecione uma unidade:</label>
@@ -67,8 +67,12 @@
 
                             <div>
                                 <input
+                                    id="submitButton"
                                     class="flex cursor-pointer mt-10 ml-auto bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
-                                    type="submit" value="Emitir alerta">
+                                    type="submit"
+                                    value="Emitir alerta"
+                                    onclick="disableButton(event)"
+                                >
                             </div>
                         </form>
                     </div>
@@ -92,4 +96,24 @@
             }, 3000); // Tempo total para o alerta desaparecer
         });
     });
+
+    function disableButton(event) {
+        var submitButton = document.getElementById("submitButton");
+        submitButton.disabled = true;
+        submitButton.classList.add('disabled-button');
+
+        setTimeout(function() {
+            document.getElementById("storeAlert").submit();
+            submitButton.disabled = false;
+        }, 500);
+
+        event.preventDefault();
+    }
 </script>
+
+<style>
+    .disabled-button {
+        background-color: #006400;
+        cursor: not-allowed;
+    }
+</style>
