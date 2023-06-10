@@ -9,17 +9,15 @@
                             <span class="material-symbols-outlined"> arrow_back </span>
                         </button>
                     </a>
-                    <h2 class="font-semibold text-xl text-gray-600">Editando unidade:</h2>
-                    <p class="text-gray-500 mb-6">{{ $facility->name }}</p>
 
                     <div class="bg-white rounded shadow-lg p-4 px-4 md:p-8 mb-6">
                         <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 lg:grid-cols-3">
                             <div class="text-gray-600">
-                                <p class="font-medium text-lg">Personal Details</p>
-                                <p>Please fill out all the fields.</p>
+                                <p class="font-medium text-lg">Editando unidade:</p>
+                                <p>{{ $facility->name }}</p>
                             </div>
 
-                        <form action="{{ route('facility.update', $facility->id) }}" method="POST">
+                        <form action="{{ route('noc.facilities.update', $facility->id) }}" method="POST">
                         @csrf
                         @method('PUT')
                             <div class="lg:col-span-2">

@@ -59,8 +59,7 @@
                         @endif
                         <textarea name="description" id="description" required cols="10" rows="3"
                                   placeholder="Explique sua situação e serviço desejado *"
-                                  class="border p-2 mt-3 w-full">{{ old('description') }}
-                        </textarea>
+                                  class="border p-2 mt-3 w-full">{{ old('description') }}</textarea>
                         <p class="font-bold text-sm mt-3">Termos de Uso *</p>
                         <div class="flex items-baseline space-x-2 mt-2">
                             <input type="checkbox" id="aceito" class="inline-block">

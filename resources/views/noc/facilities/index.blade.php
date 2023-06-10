@@ -69,7 +69,7 @@
                                 <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $facility->designation }}</td>
                                 <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $facility->carrier->name }}</td>
                                 <td class="whitespace-nowrap px-4 py-2 space-x-2">
-                                    <a href="{{ route('facility.edit', $facility->id) }}"
+                                    <a href="{{ route('noc.facilities.edit', $facility->id) }}"
                                        class="inline-block rounded bg-indigo-600 px-4 py-2 font-medium text-white hover:bg-indigo-700">
                                         <span class="material-symbols-outlined text-base"> search </span>
                                     </a>

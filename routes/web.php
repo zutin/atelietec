@@ -40,8 +40,8 @@ Route::middleware('auth')->group(function () {
 
         Route::prefix('/facilities')->group(function () {
             Route::get('/', [FacilityController::class, 'index'])->name('noc.facilities.index');
-            Route::get('/edit/{id}/', [FacilityController::class, 'edit'])->name('facility.edit');
-            Route::put('/edit/{id}/submit', [FacilityController::class, 'update'])->name('facility.update');
+            Route::get('/edit/{id}/', [FacilityController::class, 'edit'])->name('noc.facilities.edit');
+            Route::put('/edit/{id}/submit', [FacilityController::class, 'update'])->name('noc.facilities.update');
             Route::get('/create', [FacilityController::class, 'create'])->name('noc.facilities.create');
             Route::get('/search', [FacilityController::class, 'search'])->name('noc.facilities.search');
             Route::delete('/destroy/{facility}', [FacilityController::class, 'destroy'])->name('noc.facilities.destroy');
@@ -56,6 +56,8 @@ Route::middleware('auth')->group(function () {
 
         Route::prefix('/carriers')->group(function () {
             Route::get('/', [CarrierController::class, 'index'])->name('noc.carriers.index');
+            Route::get('/edit/{id}/', [CarrierController::class, 'edit'])->name('noc.carriers.edit');
+            Route::put('/edit/{id}/submit', [CarrierController::class, 'update'])->name('noc.carriers.update');
             Route::get('/search', [CarrierController::class, 'search'])->name('noc.carriers.search');
             Route::get('/create', [CarrierController::class, 'create'])->name('noc.carriers.create');
             Route::delete('/destroy/{carrier}', [CarrierController::class, 'destroy'])->name('noc.carriers.destroy');

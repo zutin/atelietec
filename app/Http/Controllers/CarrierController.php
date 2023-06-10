@@ -82,6 +82,44 @@ class CarrierController extends Controller
         return $response;
     }
 
+    public function edit($id)
+    {
+        $carrier = Carrier::findOrFail($id);
+
+        if (!$carrier) {
+            $this->alertService->alert('success', 'Operadora não encontrada!');
+            return redirect()->back();
+        }
+
+        return view('noc.carriers.edit', compact('carrier'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        try {
+            $carrier = Carrier::findOrFail($id);
+
+            if (!$carrier) {
+                $this->alertService->alert('success', 'Operadora não encontrada!');
+                return redirect()->route('noc.carriers.index');
+            }
+
+            $validatedData = $request->validate([
+                'name' => ['required', 'max:255'],
+            ]);
+
+            $carrier->name = $validatedData['name'];
+
+            $carrier->save();
+
+            $this->alertService->alert('success', 'Operadora atualizada com sucesso!');
+            return redirect()->route('noc.carriers.index');
+        } catch (\Exception $e) {
+            $this->alertService->alert('success', 'Ocorreu um erro ao atualizar a operadora: ' . $e->getMessage());
+            return redirect()->route('noc.carriers.index');
+        }
+    }
+
     public function destroy(Carrier $carrier)
     {
         $user = User::findOrFail(Auth::user()->id);

@@ -56,7 +56,7 @@
                                     {{ $carrier->name }}
                                 </td>
                                 <td class="whitespace-nowrap px-4 py-2 space-x-2">
-                                    <a href="#"
+                                    <a href="{{ route('noc.carriers.edit', $carrier->id) }}"
                                        class="inline-block rounded bg-indigo-600 px-4 py-2 font-medium text-white hover:bg-indigo-700">
                                         <span class="material-symbols-outlined text-base"> search </span>
                                     </a>
