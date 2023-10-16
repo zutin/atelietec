@@ -66,10 +66,18 @@
                             <p class="text-gray-600 text-sm">Entendo e concordo que as informações fornecidas acima
                                 sejam armazenadas com o objetivo de estabelecer um contato posterior.</p>
                         </div>
+                        <div class="g-recaptcha mt-4" data-sitekey={{config('services.recaptcha.key')}}></div>
+                        @if (session('status'))
+                            <div class="alert bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative transition-opacity duration-500"
+                                 style="opacity: 1">
+                                <span class="block sm:inline">{{ session('status') }}</span>
+                            </div>
+                        @endif
                         <input type="submit" value="Enviar" id="botao-enviar"
                                class="w-full rounded-lg mt-6 bg-blue-600 hover:bg-blue-500 text-white font-semibold p-3 cursor-not-allowed disabled:opacity-50"
                                disabled>
                     </form>
+
 
                     </body>
                     </html>

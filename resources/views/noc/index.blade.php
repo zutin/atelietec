@@ -1,7 +1,7 @@
 <x-app-layout>
 
     <div class="max-w-screen-xl flex mt-10 md:mt-0 md:mx-auto">
-        <div class="table-container overflow-x-auto">
+        <div class="table-container overflow-x-auto md:mx-auto">
 
             <div class="flex justify-between items-center mb-4">
                 <form method="GET" action="{{ route('noc.protocol.search') }}" class="flex w-full mr-4">
@@ -28,7 +28,10 @@
 
             <table class="rounded-lg min-w-full divide-y-2 divide-gray-200 bg-white text-sm">
                 <thead>
-                <tr>
+                    <tr>
+                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
+                        Status
+                    </th>
                     @if(Auth::user()->role === 'admin')
                         <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                             Protocolo
@@ -55,15 +58,33 @@
                     <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
                         Horário de Resolução
                     </th>
-                    <th class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
-                        Status
-                    </th>
                 </tr>
                 </thead>
 
                 <tbody class="divide-y text-center divide-gray-200">
                 @foreach($ticketFacilities as $call)
                     <tr class="odd:bg-gray-50">
+                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+                            @if ($call->deleted_at !== null)
+                                <i class="fas fa-check text-green-500"></i>
+                            @else
+                                @if(Auth::user()->role === 'admin')
+                                    <form class="inline-block" action="{{ route('noc.protocol.destroy', $call) }}"
+                                            method="POST"
+                                            onsubmit="return confirm('Você está finalizando este chamado. Essa ação não poderá ser desfeita. Continuar?');">
+                                        @csrf
+                                        <input type="hidden" name="_method" value="DELETE">
+                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                        <button type="submit"
+                                                class="inline-block rounded bg-indigo-600 px-2 py-1 text-xs font-medium text-white hover:bg-indigo-700">
+                                            <i class="fas fa-times"></i>
+                                        </button>
+                                    </form>
+                                @else
+                                    <i>Não Resolvido</i>
+                                @endif
+                            @endif
+                        </td>
                         @if(Auth::user()->role === 'admin')
                             <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $call->noc_protocol }}</td>
                             <td class="whitespace-nowrap px-4 py-2 font-medium text-gray-900">
@@ -101,27 +122,6 @@
                         @endif
                         <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $call->created_at }}</td>
                         <td class="whitespace-nowrap px-4 py-2 text-gray-700">{{ $call->deleted_at }}</td>
-                        <td class="whitespace-nowrap px-4 py-2 text-gray-700">
-                            @if ($call->deleted_at !== null)
-                                <i class="fas fa-check text-green-500"></i>
-                            @else
-                                @if(Auth::user()->role === 'admin')
-                                    <form class="inline-block" action="{{ route('noc.protocol.destroy', $call) }}"
-                                          method="POST"
-                                          onsubmit="return confirm('Você está finalizando este chamado. Essa ação não poderá ser desfeita. Continuar?');">
-                                        @csrf
-                                        <input type="hidden" name="_method" value="DELETE">
-                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                        <button type="submit"
-                                                class="inline-block rounded bg-indigo-600 px-2 py-1 text-xs font-medium text-white hover:bg-indigo-700">
-                                            <i class="fas fa-times"></i>
-                                        </button>
-                                    </form>
-                                @else
-                                    <i>Não Resolvido</i>
-                                @endif
-                            @endif
-                        </td>
                     </tr>
                 @endforeach
                 </tbody>
